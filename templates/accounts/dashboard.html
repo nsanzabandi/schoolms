@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dashboard{% endblock title %}
+
+{% block extra_css %}
+<link href="{% static 'css/dashboard.css' %}" rel="stylesheet">
+<!-- Add Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+{% endblock extra_css %}
+
+{% block content %}
+<div class="dashboard-layout">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="brand">
+            <h2>AGASARO</h2>
+        </div>
+        
+        <div class="user-profile">
+            <div class="avatar">
+                <img src="{% static 'images/user.png' %}" alt="User avatar">
+            </div>
+            <div class="user-info">
+                <h4>{{user.username}}</h4>
+                <div class="role-badges">
+                    <span class="badge badge-primary">{{user.user_type}}</span>
+                </div>
+            </div>
+        </div>
+
+        <nav class="sidebar-menu">
+            <a href="#" class="menu-item active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <!-- Top Navigation -->
+        <div class="top-nav">
+            <div class="left-section">
+                <!--<button class="menu-toggle"> -->
+                   <!--<i class="fas fa-bars"></i>--> 
+                <!--</button> -->
+                <div class="headerimage-dashboard">
+                    <!--<span class="badge badge-new">New</span> -->
+                    <span class="headerimage"><img src="{% static 'images/headerimage.png' %}" width="97%" height="10%"></span>
+                </div>
+            </div>
+            
+            <div class="right-section">
+
+                <div class="user-actions">
+                    <div class="user-dropdown">
+                        <button class="dropdown-toggle" id="userDropdown">
+                            <span>Me</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="{% url 'accounts:profile' %}" class="dropdown-item">
+                                <i class="fas fa-user"></i> Profile
+                            </a>
+                            <a href="{% url 'accounts:update_profile' %}" class="dropdown-item">
+                                <i class="fas fa-cog"></i> Settings
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <form method="post" action="{% url 'accounts:logout' %}" class="dropdown-item">
+                                {% csrf_token %}
+                                <button type="submit" class="logout-button">
+                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation Tabs -->
+        <div class="main-nav">
+            <div class="nav-tabs">
+                <a href="#" class="tab-item">
+                    <i class="fas fa-users"></i> Users
+                </a>
+                <a href="#" class="tab-item">
+                    <i class="fas fa-book"></i> Invetory
+                </a>
+                <a href="#" class="tab-item">
+                    <i class="fas fa-clock"></i> Students
+                </a>
+                <a href="#" class="tab-item">
+                    <i class="fas fa-chart-bar"></i> Purchase
+                </a>
+            </div>
+
+        <!-- Content Area -->
+        <div class="content-area">
+            <div class="section-title">
+                <i class="fas fa-book"></i>
+                <h3>Subjects taught by {{ user.last_name }}</h3>
+            </div>
+
+            <div class="subjects-table">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Classroom</th>
+                            <th>Subject</th>
+                            <th>Maximum</th>
+                            <th>Credits</th>
+                            <th>Subject Type</th>
+                            <th>Non-taking Students</th>
+                            <th>CA-MIS Results Export</th>
+                            <th>Results Changes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Add your table rows here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const userDropdown = document.getElementById('userDropdown');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+
+    // Toggle dropdown
+    userDropdown.addEventListener('click', function(e) {
+        e.stopPropagation();
+        dropdownMenu.classList.toggle('show');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!userDropdown.contains(e.target)) {
+            dropdownMenu.classList.remove('show');
+        }
+    });
+});
+</script>
+{% endblock extra_js %}
