@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 if os.environ.get('RAILWAY_ENVIRONMENT'):
     DATABASES = {
         'default': dj_database_url.config(
-            default=os.environ.get('DATABASE_URL'),
+            default=config('DATABASE_URL'),
             conn_max_age=600,
             conn_health_checks=True
         )
@@ -125,7 +125,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Email Configuration
 if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'testing@example.com'
+    DEFAULT_FROM_EMAIL = 'danielnsanzabandi@gmail.com'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_HOST = config('EMAIL_HOST')
@@ -230,11 +230,3 @@ else:
             },
         },
     }
-
-# Cache settings (optional - uncomment if using caching)
-# CACHES = {
-#     'default': {
-#         'BACKEND': 'django.core.cache.backends.redis.RedisCache',
-#         'LOCATION': config('REDIS_URL', default='redis://127.0.0.1:6379/1'),
-#     }
-# }
