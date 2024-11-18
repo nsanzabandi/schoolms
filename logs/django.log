@@ -1,0 +1,585 @@
+INFO 2024-11-18 15:32:38,671 autoreload 16571 137341520838656 Watching for file changes with StatReloader
+ERROR 2024-11-18 15:32:41,436 exception 16571 137341465265728 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:32:41,445 log 16571 137341465265728 Bad Request: /
+WARNING 2024-11-18 15:32:41,448 basehttp 16571 137341465265728 "GET / HTTP/1.1" 400 143
+ERROR 2024-11-18 15:32:41,700 exception 16571 137341465265728 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:32:41,703 log 16571 137341465265728 Bad Request: /favicon.ico
+WARNING 2024-11-18 15:32:41,705 basehttp 16571 137341465265728 "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2024-11-18 15:32:47,813 exception 16571 137341454779968 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:32:47,815 log 16571 137341454779968 Bad Request: /accounts/dashboard/
+WARNING 2024-11-18 15:32:47,819 basehttp 16571 137341454779968 "GET /accounts/dashboard/ HTTP/1.1" 400 143
+ERROR 2024-11-18 15:32:47,895 exception 16571 137341465265728 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:32:47,897 log 16571 137341465265728 Bad Request: /favicon.ico
+WARNING 2024-11-18 15:32:47,899 basehttp 16571 137341465265728 "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2024-11-18 15:32:51,639 exception 16571 137341465265728 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:32:51,641 log 16571 137341465265728 Bad Request: /accounts/dashboard/
+WARNING 2024-11-18 15:32:51,644 basehttp 16571 137341465265728 "GET /accounts/dashboard/ HTTP/1.1" 400 143
+ERROR 2024-11-18 15:32:51,716 exception 16571 137341454779968 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:32:51,719 log 16571 137341454779968 Bad Request: /favicon.ico
+WARNING 2024-11-18 15:32:51,720 basehttp 16571 137341454779968 "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2024-11-18 15:32:53,319 exception 16571 137341454779968 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:32:53,320 log 16571 137341454779968 Bad Request: /accounts/dashboard/
+WARNING 2024-11-18 15:32:53,321 basehttp 16571 137341454779968 "GET /accounts/dashboard/ HTTP/1.1" 400 143
+ERROR 2024-11-18 15:32:53,436 exception 16571 137341465265728 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:32:53,440 log 16571 137341465265728 Bad Request: /favicon.ico
+WARNING 2024-11-18 15:32:53,440 basehttp 16571 137341465265728 "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2024-11-18 15:32:54,175 exception 16571 137341465265728 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:32:54,176 log 16571 137341465265728 Bad Request: /accounts/dashboard/
+WARNING 2024-11-18 15:32:54,177 basehttp 16571 137341465265728 "GET /accounts/dashboard/ HTTP/1.1" 400 143
+ERROR 2024-11-18 15:32:54,271 exception 16571 137341465265728 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:32:54,274 log 16571 137341465265728 Bad Request: /favicon.ico
+WARNING 2024-11-18 15:32:54,274 basehttp 16571 137341465265728 "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2024-11-18 15:32:55,097 exception 16571 137341454779968 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:32:55,099 log 16571 137341454779968 Bad Request: /accounts/dashboard/
+WARNING 2024-11-18 15:32:55,101 basehttp 16571 137341454779968 "GET /accounts/dashboard/ HTTP/1.1" 400 143
+ERROR 2024-11-18 15:32:55,189 exception 16571 137341465265728 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:32:55,191 log 16571 137341465265728 Bad Request: /favicon.ico
+WARNING 2024-11-18 15:32:55,192 basehttp 16571 137341465265728 "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2024-11-18 15:32:55,567 exception 16571 137341465265728 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:32:55,571 log 16571 137341465265728 Bad Request: /accounts/dashboard/
+WARNING 2024-11-18 15:32:55,572 basehttp 16571 137341465265728 "GET /accounts/dashboard/ HTTP/1.1" 400 143
+ERROR 2024-11-18 15:32:55,640 exception 16571 137341454779968 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:32:55,641 log 16571 137341454779968 Bad Request: /favicon.ico
+WARNING 2024-11-18 15:32:55,642 basehttp 16571 137341454779968 "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2024-11-18 15:32:55,737 exception 16571 137341454779968 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:32:55,738 log 16571 137341454779968 Bad Request: /accounts/dashboard/
+WARNING 2024-11-18 15:32:55,741 basehttp 16571 137341454779968 "GET /accounts/dashboard/ HTTP/1.1" 400 143
+ERROR 2024-11-18 15:32:55,810 exception 16571 137341454779968 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:32:55,812 log 16571 137341454779968 Bad Request: /favicon.ico
+WARNING 2024-11-18 15:32:55,814 basehttp 16571 137341454779968 "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2024-11-18 15:32:55,945 exception 16571 137341454779968 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:32:55,947 log 16571 137341454779968 Bad Request: /accounts/dashboard/
+WARNING 2024-11-18 15:32:55,948 basehttp 16571 137341454779968 "GET /accounts/dashboard/ HTTP/1.1" 400 143
+ERROR 2024-11-18 15:32:56,011 exception 16571 137341465265728 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:32:56,014 log 16571 137341465265728 Bad Request: /favicon.ico
+WARNING 2024-11-18 15:32:56,014 basehttp 16571 137341465265728 "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2024-11-18 15:32:56,270 exception 16571 137341465265728 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:32:56,271 log 16571 137341465265728 Bad Request: /accounts/dashboard/
+WARNING 2024-11-18 15:32:56,272 basehttp 16571 137341465265728 "GET /accounts/dashboard/ HTTP/1.1" 400 143
+ERROR 2024-11-18 15:32:56,345 exception 16571 137341465265728 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:32:56,348 log 16571 137341465265728 Bad Request: /favicon.ico
+WARNING 2024-11-18 15:32:56,349 basehttp 16571 137341465265728 "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2024-11-18 15:33:00,171 exception 16571 137341454779968 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:33:00,175 log 16571 137341454779968 Bad Request: /admin/
+WARNING 2024-11-18 15:33:00,176 basehttp 16571 137341454779968 "GET /admin/ HTTP/1.1" 400 143
+ERROR 2024-11-18 15:33:01,006 exception 16571 137341454779968 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:33:01,007 log 16571 137341454779968 Bad Request: /admin/
+WARNING 2024-11-18 15:33:01,011 basehttp 16571 137341454779968 "GET /admin/ HTTP/1.1" 400 143
+ERROR 2024-11-18 15:33:01,124 exception 16571 137341465265728 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:33:01,125 log 16571 137341465265728 Bad Request: /favicon.ico
+WARNING 2024-11-18 15:33:01,127 basehttp 16571 137341465265728 "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2024-11-18 15:33:04,813 exception 16571 137341465265728 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:33:04,815 log 16571 137341465265728 Bad Request: /admin/
+WARNING 2024-11-18 15:33:04,816 basehttp 16571 137341465265728 "GET /admin/ HTTP/1.1" 400 143
+ERROR 2024-11-18 15:33:04,917 exception 16571 137341465265728 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:33:04,920 log 16571 137341465265728 Bad Request: /favicon.ico
+WARNING 2024-11-18 15:33:04,922 basehttp 16571 137341465265728 "GET /favicon.ico HTTP/1.1" 400 143
+INFO 2024-11-18 15:34:06,278 autoreload 16928 125873098096640 Watching for file changes with StatReloader
+INFO 2024-11-18 15:35:01,488 autoreload 17060 133753386336256 Watching for file changes with StatReloader
+ERROR 2024-11-18 15:35:04,143 exception 17060 133753330468416 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:35:04,152 log 17060 133753330468416 Bad Request: /
+WARNING 2024-11-18 15:35:04,155 basehttp 17060 133753330468416 "GET / HTTP/1.1" 400 143
+ERROR 2024-11-18 15:35:04,634 exception 17060 133753330468416 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:35:04,636 log 17060 133753330468416 Bad Request: /favicon.ico
+WARNING 2024-11-18 15:35:04,637 basehttp 17060 133753330468416 "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2024-11-18 15:35:11,938 exception 17060 133753319982656 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:35:11,940 log 17060 133753319982656 Bad Request: /accounts/dashboard/
+WARNING 2024-11-18 15:35:11,944 basehttp 17060 133753319982656 "GET /accounts/dashboard/ HTTP/1.1" 400 143
+ERROR 2024-11-18 15:35:12,047 exception 17060 133753319982656 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:35:12,048 log 17060 133753319982656 Bad Request: /favicon.ico
+WARNING 2024-11-18 15:35:12,051 basehttp 17060 133753319982656 "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2024-11-18 15:35:40,356 exception 17060 133753319982656 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:35:40,358 log 17060 133753319982656 Bad Request: /accounts/dashboard/
+WARNING 2024-11-18 15:35:40,360 basehttp 17060 133753319982656 "GET /accounts/dashboard/ HTTP/1.1" 400 143
+ERROR 2024-11-18 15:35:40,630 exception 17060 133753319982656 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:35:40,634 log 17060 133753319982656 Bad Request: /favicon.ico
+WARNING 2024-11-18 15:35:40,644 basehttp 17060 133753319982656 "GET /favicon.ico HTTP/1.1" 400 143
+INFO 2024-11-18 15:35:55,284 autoreload 17408 134406864736256 Watching for file changes with StatReloader
+INFO 2024-11-18 15:36:01,116 autoreload 17530 138874846117888 Watching for file changes with StatReloader
+ERROR 2024-11-18 15:36:04,878 exception 17530 138874789561920 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:36:04,885 log 17530 138874789561920 Bad Request: /
+WARNING 2024-11-18 15:36:04,889 basehttp 17530 138874789561920 "GET / HTTP/1.1" 400 143
+ERROR 2024-11-18 15:36:05,102 exception 17530 138874789561920 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:36:05,105 log 17530 138874789561920 Bad Request: /favicon.ico
+WARNING 2024-11-18 15:36:05,106 basehttp 17530 138874789561920 "GET /favicon.ico HTTP/1.1" 400 143
+ERROR 2024-11-18 15:36:08,597 exception 17530 138874789561920 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:36:08,602 log 17530 138874789561920 Bad Request: /admin/
+WARNING 2024-11-18 15:36:08,603 basehttp 17530 138874789561920 "GET /admin/ HTTP/1.1" 400 143
+ERROR 2024-11-18 15:36:08,980 exception 17530 138874789561920 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:36:08,982 log 17530 138874789561920 Bad Request: /admin/
+WARNING 2024-11-18 15:36:08,983 basehttp 17530 138874789561920 "GET /admin/ HTTP/1.1" 400 143
+ERROR 2024-11-18 15:36:09,084 exception 17530 138874779076160 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:36:09,086 log 17530 138874779076160 Bad Request: /favicon.ico
+WARNING 2024-11-18 15:36:09,088 basehttp 17530 138874779076160 "GET /favicon.ico HTTP/1.1" 400 143
+INFO 2024-11-18 15:46:33,334 autoreload 17530 138874846117888 /home/daniel/Documents/AgasaroProj/schoolms/config/settings.py changed, reloading.
+INFO 2024-11-18 15:46:34,244 autoreload 18065 139559130718208 Watching for file changes with StatReloader
+ERROR 2024-11-18 15:46:48,030 exception 18065 139559073482304 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:46:48,035 log 18065 139559073482304 Bad Request: /accounts/dashboard/
+WARNING 2024-11-18 15:46:48,036 basehttp 18065 139559073482304 "GET /accounts/dashboard/ HTTP/1.1" 400 143
+ERROR 2024-11-18 15:46:48,238 exception 18065 139559073482304 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:46:48,239 log 18065 139559073482304 Bad Request: /favicon.ico
+WARNING 2024-11-18 15:46:48,240 basehttp 18065 139559073482304 "GET /favicon.ico HTTP/1.1" 400 143
+INFO 2024-11-18 15:47:43,196 autoreload 18255 137211486429184 Watching for file changes with StatReloader
+INFO 2024-11-18 15:47:49,692 autoreload 18340 126642885693440 Watching for file changes with StatReloader
+ERROR 2024-11-18 15:47:54,155 exception 18340 126642827560512 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:47:54,160 log 18340 126642827560512 Bad Request: /
+WARNING 2024-11-18 15:47:54,162 basehttp 18340 126642827560512 "GET / HTTP/1.1" 400 143
+ERROR 2024-11-18 15:47:54,362 exception 18340 126642827560512 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:47:54,363 log 18340 126642827560512 Bad Request: /favicon.ico
+WARNING 2024-11-18 15:47:54,367 basehttp 18340 126642827560512 "GET /favicon.ico HTTP/1.1" 400 143
+INFO 2024-11-18 15:49:33,203 autoreload 18587 127488883130368 Watching for file changes with StatReloader
+INFO 2024-11-18 15:49:38,134 autoreload 18690 135019269128192 Watching for file changes with StatReloader
+ERROR 2024-11-18 15:49:43,825 exception 18690 135019139958336 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:49:43,833 log 18690 135019139958336 Bad Request: /
+WARNING 2024-11-18 15:49:43,835 basehttp 18690 135019139958336 "GET / HTTP/1.1" 400 143
+ERROR 2024-11-18 15:49:44,037 exception 18690 135019139958336 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:49:44,039 log 18690 135019139958336 Bad Request: /favicon.ico
+WARNING 2024-11-18 15:49:44,041 basehttp 18690 135019139958336 "GET /favicon.ico HTTP/1.1" 400 143
+INFO 2024-11-18 15:52:03,867 autoreload 18961 136020509523968 Watching for file changes with StatReloader
+INFO 2024-11-18 15:52:09,662 autoreload 19078 136559621144576 Watching for file changes with StatReloader
+ERROR 2024-11-18 15:52:12,609 exception 19078 136559489713728 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:52:12,615 log 19078 136559489713728 Bad Request: /
+WARNING 2024-11-18 15:52:12,617 basehttp 19078 136559489713728 "GET / HTTP/1.1" 400 143
+ERROR 2024-11-18 15:52:12,871 exception 19078 136559489713728 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/middleware/security.py", line 28, in process_request
+    host = self.redirect_host or request.get_host()
+  File "/home/daniel/Documents/AgasaroProj/schoolms/venv/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2024-11-18 15:52:12,874 log 19078 136559489713728 Bad Request: /favicon.ico
+WARNING 2024-11-18 15:52:12,875 basehttp 19078 136559489713728 "GET /favicon.ico HTTP/1.1" 400 143

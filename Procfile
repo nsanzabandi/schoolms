@@ -1,1 +1,1 @@
-web:gunicorn schoolms.wsgi --lo-file -
+web: gunicorn schoolms.wsgi
