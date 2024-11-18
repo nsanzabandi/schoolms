@@ -1,6 +1,7 @@
-import os,dj_database_url
+import os
 from pathlib import Path
-from decouple import config
+from decouple import config, Csv
+import dj_database_url
 
 # Build paths inside the project
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -17,8 +18,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 # Update ALLOWED_HOSTS - make it configurable from .env
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1', 
-                      cast=lambda v: [s.strip() for s in v.split(',')])
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1', cast=Csv())
 
 # Application definition
 INSTALLED_APPS = [
@@ -102,7 +102,8 @@ else:
             'PORT': config('DB_PORT', cast=int),
         }
     }
-# Password Validation
+
+# Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -161,7 +162,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Internationalization
 LANGUAGE_CODE = 'en-us'
-TIME_ZONE = 'Africa/Kigali'
+TIME_ZONE = config('TIME_ZONE', default='Africa/Kigali')
 USE_I18N = True
 USE_TZ = True
 
