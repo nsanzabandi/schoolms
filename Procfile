@@ -1,1 +1,2 @@
-web: gunicorn schoolms.wsgi
+web: gunicorn config.wsgi
+
