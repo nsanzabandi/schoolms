@@ -33,7 +33,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'widget_tweaks',
     'crispy_bootstrap4',
-    'whitenoise.runserver_nostatic', # Added WhiteNoise for static files
+    #'whitenoise.runserver_nostatic',
     # Local apps
     'apps.accounts',
 ]
