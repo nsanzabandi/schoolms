@@ -590,3 +590,105 @@ INFO 2024-11-19 21:44:34,961 autoreload 5500 128923881111552 Watching for file c
 INFO 2024-11-19 21:47:20,090 autoreload 6022 133855211454464 Watching for file changes with StatReloader
 INFO 2024-11-19 21:49:51,981 autoreload 6022 133855211454464 /home/daniel/Documents/AgasaroProj/schoolms/config/settings.py changed, reloading.
 INFO 2024-11-19 21:49:52,689 autoreload 6141 134485456121856 Watching for file changes with StatReloader
+INFO 2024-11-20 09:03:52,406 autoreload 18240 132130433445888 Watching for file changes with StatReloader
+INFO 2024-11-20 09:04:03,146 basehttp 18240 132130304689728 "GET / HTTP/1.1" 301 0
+INFO 2024-11-20 09:04:03,175 basehttp 18240 132130283718208 code 400, message Bad request version ('E1Û\x94\x10B')
+ERROR 2024-11-20 09:04:03,181 basehttp 18240 132130283718208 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:04:03,189 basehttp 18240 132130283718208 code 400, message Bad request version ('\x9d5eÄA¹\x93\x8c\x8fc"?,ÆVO')
+ERROR 2024-11-20 09:04:03,189 basehttp 18240 132130283718208 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:04:26,544 autoreload 18452 140601618210816 Watching for file changes with StatReloader
+INFO 2024-11-20 09:05:16,274 autoreload 18593 124771381981184 Watching for file changes with StatReloader
+INFO 2024-11-20 09:05:37,894 basehttp 18593 124771324921408 code 400, message Bad request version ('a\x91s')
+ERROR 2024-11-20 09:05:37,894 basehttp 18593 124771324921408 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:05:37,912 basehttp 18593 124771324921408 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03i}Î\x9b')
+ERROR 2024-11-20 09:05:37,912 basehttp 18593 124771324921408 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:14:15,040 autoreload 18593 124771381981184 /home/daniel/Documents/AgasaroProj/schoolms/config/settings.py changed, reloading.
+INFO 2024-11-20 09:14:15,942 autoreload 18944 134970853928960 Watching for file changes with StatReloader
+INFO 2024-11-20 09:14:41,335 basehttp 18944 134970796410432 code 400, message Bad request version ('f\x08ì\x84P¥\x161\x8a³+\x0flð\x97·\x84')
+ERROR 2024-11-20 09:14:41,337 basehttp 18944 134970796410432 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:14:41,342 basehttp 18944 134970796410432 code 400, message Bad request version ('9\x95Ñ\x95\x99MQ\x94<;-Ü\x00')
+ERROR 2024-11-20 09:14:41,342 basehttp 18944 134970796410432 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:16:53,240 autoreload 19213 132900483248128 Watching for file changes with StatReloader
+INFO 2024-11-20 09:17:08,872 autoreload 19370 123645184065536 Watching for file changes with StatReloader
+INFO 2024-11-20 09:17:18,211 basehttp 19370 123645124937280 code 400, message Bad request version ('\x02h2\x08http/1.1\x00\x12\x00\x00\x00')
+ERROR 2024-11-20 09:17:18,212 basehttp 19370 123645124937280 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:17:18,233 basehttp 19370 123645124937280 code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00-\x00\x02\x01\x01\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00+\x00\x07\x06úú\x03\x04\x03\x03\x00')
+ERROR 2024-11-20 09:17:18,234 basehttp 19370 123645124937280 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:19:20,487 basehttp 19370 123645124937280 code 400, message Bad request version ('µô\x90\x87En¾Q×HÙÑ5ÕÖ¼TÌ\x03û¤Î\x05uÇ\x9fH7\x81Dûf\x00ðé2Z½')
+ERROR 2024-11-20 09:19:20,487 basehttp 19370 123645124937280 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:19:20,493 basehttp 19370 123645124937280 code 400, message Bad request version ('\x02h2\x08http/1.1\x00')
+ERROR 2024-11-20 09:19:20,494 basehttp 19370 123645124937280 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:19:20,510 basehttp 19370 123645114451520 code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01ÿ\x01\x00\x01\x00\x00#\x00\x00\x00')
+INFO 2024-11-20 09:19:20,510 basehttp 19370 123645124937280 code 400, message Bad request version ('>\xad\x19k\x88·¤U2·Ø*ñoêS°ê')
+ERROR 2024-11-20 09:19:20,512 basehttp 19370 123645114451520 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2024-11-20 09:19:20,512 basehttp 19370 123645124937280 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:19:20,525 basehttp 19370 123645114451520 code 400, message Bad request version ('\x03Á¤mjÄ¶\x1b\x18\x051òSñÄ3ç\x11Å\x9e\x8aÆ\x8e')
+ERROR 2024-11-20 09:19:20,527 basehttp 19370 123645114451520 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:19:20,527 basehttp 19370 123645103965760 code 400, message Bad request version ('\x00ú\x00\x00\x01\x00\x01Þ\x00')
+ERROR 2024-11-20 09:19:20,530 basehttp 19370 123645103965760 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:19:21,650 basehttp 19370 123645103965760 code 400, message Bad request version ('¡\x06')
+ERROR 2024-11-20 09:19:21,651 basehttp 19370 123645103965760 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:19:21,658 basehttp 19370 123645103965760 code 400, message Bad request version ('ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93\x1a\x1a\x00\x00\x00')
+ERROR 2024-11-20 09:19:21,659 basehttp 19370 123645103965760 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:19:21,667 basehttp 19370 123645103965760 code 400, message Bad request version ('çT\x13¥×ô\x7f\x00ðX\x05Q©\x7f\x80±H¬uSmfw²4@o9Æ0\x8cO¨ûue8§ð')
+ERROR 2024-11-20 09:19:21,667 basehttp 19370 123645103965760 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:19:21,674 basehttp 19370 123645103965760 code 400, message Bad request version ('zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s')
+ERROR 2024-11-20 09:19:21,676 basehttp 19370 123645103965760 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:19:21,680 basehttp 19370 123645114451520 code 400, message Bad request version ('\x02h2\x08http/1.1\x003\x04ï\x04íªª\x00\x01\x00c\x99\x04À')
+ERROR 2024-11-20 09:19:21,681 basehttp 19370 123645114451520 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:19:21,688 basehttp 19370 123645114451520 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03\x17')
+ERROR 2024-11-20 09:19:21,688 basehttp 19370 123645114451520 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:20:44,134 autoreload 19370 123645184065536 /home/daniel/Documents/AgasaroProj/schoolms/config/settings.py changed, reloading.
+INFO 2024-11-20 09:20:45,009 autoreload 19769 127217493393408 Watching for file changes with StatReloader
+INFO 2024-11-20 09:20:52,341 basehttp 19769 127217434625600 code 400, message Bad request version ('ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06SZZ\x00\x00\x00')
+ERROR 2024-11-20 09:20:52,341 basehttp 19769 127217434625600 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:20:52,351 basehttp 19769 127217434625600 code 400, message Bad request syntax ('\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03\x08\x7fg')
+ERROR 2024-11-20 09:20:52,353 basehttp 19769 127217434625600 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:24:47,960 autoreload 20114 135526691381248 Watching for file changes with StatReloader
+INFO 2024-11-20 09:24:57,623 autoreload 20237 129922751119360 Watching for file changes with StatReloader
+INFO 2024-11-20 09:25:07,207 basehttp 20237 129922624390720 "GET / HTTP/1.1" 301 0
+INFO 2024-11-20 09:25:07,247 basehttp 20237 129922603419200 code 400, message Bad request version ('þ/\x00')
+ERROR 2024-11-20 09:25:07,247 basehttp 20237 129922603419200 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:25:07,254 basehttp 20237 129922603419200 code 400, message Bad request version ('\x00\x02\x01\x00\x00-\x00\x02\x01\x01Di\x00\x05\x00\x03\x02h2\x00')
+ERROR 2024-11-20 09:25:07,254 basehttp 20237 129922603419200 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:27:39,990 basehttp 20237 129922624390720 code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01Di\x00\x05\x00\x03\x02h2\x00')
+ERROR 2024-11-20 09:27:39,990 basehttp 20237 129922624390720 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:27:39,995 basehttp 20237 129922624390720 code 400, message Bad request version ('G\x9c\x8aÆ¢§&¡\x8e@7uI×Á*%ËqZL')
+ERROR 2024-11-20 09:27:39,996 basehttp 20237 129922624390720 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:27:47,111 basehttp 20237 129922603419200 code 400, message Bad request version ('ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Szz\x00\x00\x00')
+ERROR 2024-11-20 09:27:47,112 basehttp 20237 129922603419200 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:27:47,119 basehttp 20237 129922603419200 code 400, message Bad request version ('L')
+ERROR 2024-11-20 09:27:47,120 basehttp 20237 129922603419200 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:29:21,960 autoreload 20695 138647842824192 Watching for file changes with StatReloader
+INFO 2024-11-20 09:29:29,582 autoreload 20844 139179938750464 Watching for file changes with StatReloader
+INFO 2024-11-20 09:29:38,705 basehttp 20844 139179879040576 code 400, message Bad request version ('¶\x13Y\x19p@Öu\x9bßr\x94')
+ERROR 2024-11-20 09:29:38,706 basehttp 20844 139179879040576 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:29:38,719 basehttp 20844 139179879040576 code 400, message Bad request version ('íÁ¨oß\x06j\x00\x12\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00')
+ERROR 2024-11-20 09:29:38,719 basehttp 20844 139179879040576 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:32:27,466 basehttp 20844 139179868554816 code 400, message Bad request version ("\x99\x05q«'")
+ERROR 2024-11-20 09:32:27,467 basehttp 20844 139179868554816 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:32:27,472 basehttp 20844 139179868554816 code 400, message Bad request version ('Ù¾Ã')
+ERROR 2024-11-20 09:32:27,473 basehttp 20844 139179868554816 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:32:27,533 basehttp 20844 139179868554816 code 400, message Bad request version ('¬\x91\x91ýy¼}D\x00¨')
+ERROR 2024-11-20 09:32:27,533 basehttp 20844 139179868554816 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:32:27,534 basehttp 20844 139179868554816 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06')
+ERROR 2024-11-20 09:32:27,534 basehttp 20844 139179868554816 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:32:27,554 basehttp 20844 139179868554816 code 400, message Bad request version ('g\x9dV8ÔöBúÝy\x8b\x06\x16a«tã\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x12\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00')
+ERROR 2024-11-20 09:32:27,554 basehttp 20844 139179868554816 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:32:27,564 basehttp 20844 139179879040576 code 400, message Bad request version ('u\x91ê\x95lÅ\x99$\x8b$\x00°3U8(+³âÆDõí®$l*@%\x16sM]fÎ¾ÛÈY±,§º:')
+ERROR 2024-11-20 09:32:27,565 basehttp 20844 139179879040576 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:32:31,551 basehttp 20844 139179879040576 code 400, message Bad request version ('*Ð\x8a!~\x92?mÐ\x9eu·C\x7fÖ¨f{\x9dDF~oj¸¼\x8a\x0eaW\x9f\x8aá7\x025.\x06L;À\x1b\x86Ñ\x97¦=ãa\x92QkX39båÏÄë]çä¡\x174]mÐ\x8f\x93Ë\x80ëK\x87é\x05')
+ERROR 2024-11-20 09:32:31,552 basehttp 20844 139179879040576 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:32:31,558 basehttp 20844 139179879040576 code 400, message Bad request version ('\x00\x02\x01\x00Di\x00\x05\x00\x03\x02h2\x00')
+ERROR 2024-11-20 09:32:31,558 basehttp 20844 139179879040576 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:33:35,618 basehttp 20844 139179858069056 "GET / HTTP/1.1" 301 0
+INFO 2024-11-20 09:33:35,634 basehttp 20844 139179858069056 code 400, message Bad request version ('ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06S::\x00\x00\x00')
+ERROR 2024-11-20 09:33:35,634 basehttp 20844 139179858069056 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:33:35,641 basehttp 20844 139179858069056 code 400, message Bad request version ('\x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063zz\x00\x00\x00\x12\x00\x00\x00')
+ERROR 2024-11-20 09:33:35,641 basehttp 20844 139179858069056 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:43:11,429 autoreload 21648 132982494564352 Watching for file changes with StatReloader
+INFO 2024-11-20 09:43:19,085 autoreload 21787 124444097585152 Watching for file changes with StatReloader
+INFO 2024-11-20 09:43:37,790 basehttp 21787 124444039185984 code 400, message Bad request version ('\x8a\x02#ÅÃ°\x86\x9f2[/8ºª\x0f\x98¯æö\x8cz#')
+ERROR 2024-11-20 09:43:37,791 basehttp 21787 124444039185984 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2024-11-20 09:43:37,798 basehttp 21787 124444039185984 code 400, message Bad request version ('\x88U®Uê/\x80{>\x04')
+ERROR 2024-11-20 09:43:37,798 basehttp 21787 124444039185984 You're accessing the development server over HTTPS, but it only supports HTTP.

@@ -6,19 +6,16 @@ import dj_database_url
 # Build paths inside the project
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Create logs directory if it doesn't exist
+# Create logs directory
 LOGS_DIR = BASE_DIR / 'logs'
 if not os.path.exists(LOGS_DIR):
     os.makedirs(LOGS_DIR)
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# Security Settings
 SECRET_KEY = config('SECRET_KEY')
-
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
-
-# Update ALLOWED_HOSTS - make it configurable from .env
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1,.onrender.com', cast=Csv())
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', cast=Csv())
 
 # Application definition
 INSTALLED_APPS = [
@@ -34,16 +31,19 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'crispy_bootstrap4',
     'whitenoise.runserver_nostatic',
+    
     # Local apps
     'apps.accounts',
 ]
 
+# Third-party apps configuration
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 
+# Middleware
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware', # Added WhiteNoise Middleware
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -52,18 +52,32 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# Security settings - only applied when DEBUG is False
-if not DEBUG:
+# Conditional Security Settings
+if DEBUG:
+    # Development settings
+    SECURE_SSL_REDIRECT = False
+    SESSION_COOKIE_SECURE = False
+    CSRF_COOKIE_SECURE = False
+else:
+    # Production settings
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
     SECURE_BROWSER_XSS_FILTER = True
     SECURE_CONTENT_TYPE_NOSNIFF = True
     X_FRAME_OPTIONS = 'DENY'
+    SECURE_HSTS_SECONDS = 31536000
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = True
 
+# URLs and Auth
 ROOT_URLCONF = 'config.urls'
 AUTH_USER_MODEL = 'accounts.User'
+LOGIN_URL = 'accounts:login'
+LOGIN_REDIRECT_URL = 'accounts:dashboard'
+LOGOUT_REDIRECT_URL = 'accounts:login'
 
+# Templates
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -80,14 +94,15 @@ TEMPLATES = [
     },
 ]
 
+# WSGI
 WSGI_APPLICATION = 'config.wsgi.application'
 
-# Database configuration
+# Database
 DATABASES = {
     'default': dj_database_url.config(
         default=config('DATABASE_URL'),
         conn_max_age=600,
-        conn_health_checks=True
+        conn_health_checks=True,
     )
 }
 
@@ -113,109 +128,78 @@ AUTH_PASSWORD_VALIDATORS = [
 # Email Configuration
 if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'danielnsanzabandi@gmail.com'
+    DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 else:
-    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_BACKEND = config('EMAIL_BACKEND')
     EMAIL_HOST = config('EMAIL_HOST')
     EMAIL_PORT = config('EMAIL_PORT', cast=int)
-    EMAIL_USE_TLS = True
+    EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
     EMAIL_HOST_USER = config('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-    DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL', default=EMAIL_HOST_USER)
-    SERVER_EMAIL = config('SERVER_EMAIL', default=EMAIL_HOST_USER)
+    DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
+    SERVER_EMAIL = config('SERVER_EMAIL')
 
-# Static and Media files
+# Static and Media Files
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' if not DEBUG else 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-# File upload settings
-FILE_UPLOAD_MAX_MEMORY_SIZE = 5242880  # 5MB
-DATA_UPLOAD_MAX_MEMORY_SIZE = 5242880  # 5MB
+# File Upload Settings
+FILE_UPLOAD_MAX_MEMORY_SIZE = config('FILE_UPLOAD_MAX_MEMORY_SIZE', default=5242880, cast=int)
+DATA_UPLOAD_MAX_MEMORY_SIZE = config('DATA_UPLOAD_MAX_MEMORY_SIZE', default=5242880, cast=int)
 
-# Auth settings
-LOGIN_URL = 'login'
-LOGIN_REDIRECT_URL = 'dashboard'
-LOGOUT_REDIRECT_URL = 'login'
-
-# Session settings
-SESSION_COOKIE_AGE = 3600  # 1 hour in seconds
+# Session Settings
+SESSION_COOKIE_AGE = 3600  # 1 hour
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Internationalization
-LANGUAGE_CODE = 'en-us'
-TIME_ZONE = config('TIME_ZONE', default='Africa/Kigali')
+LANGUAGE_CODE = config('LANGUAGE_CODE', default='en-us')
+TIME_ZONE = config('TIME_ZONE', default='UTC')
 USE_I18N = True
 USE_TZ = True
 
-# Logging configuration
-if DEBUG:
-    # Development logging - console only
-    LOGGING = {
-        'version': 1,
-        'disable_existing_loggers': False,
-        'formatters': {
-            'simple': {
-                'format': '{levelname} {message}',
-                'style': '{',
-            },
+# Logging Configuration
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
         },
-        'handlers': {
-            'console': {
-                'class': 'logging.StreamHandler',
-                'formatter': 'simple',
-            },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
         },
-        'loggers': {
-            'django': {
-                'handlers': ['console'],
-                'level': 'INFO',
-            },
-            'apps': {
-                'handlers': ['console'],
-                'level': 'DEBUG',
-            },
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple' if DEBUG else 'verbose',
         },
-    }
-else:
-    # Production logging - both console and file
-    LOGGING = {
-        'version': 1,
-        'disable_existing_loggers': False,
-        'formatters': {
-            'verbose': {
-                'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
-                'style': '{',
-            },
+        'file': {
+            'class': 'logging.FileHandler',
+            'filename': str(LOGS_DIR / 'django.log'),
+            'formatter': 'verbose',
         },
-        'handlers': {
-            'console': {
-                'class': 'logging.StreamHandler',
-                'formatter': 'verbose',
-            },
-            'file': {
-                'class': 'logging.FileHandler',
-                'filename': str(LOGS_DIR / 'django.log'),
-                'formatter': 'verbose',
-            },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'file'] if not DEBUG else ['console'],
+            'level': 'INFO',
+            'propagate': True,
         },
-        'loggers': {
-            'django': {
-                'handlers': ['console', 'file'],
-                'level': 'INFO',
-                'propagate': True,
-            },
-            'apps': {
-                'handlers': ['console', 'file'],
-                'level': 'INFO',
-                'propagate': True,
-            },
+        'apps': {
+            'handlers': ['console', 'file'] if not DEBUG else ['console'],
+            'level': 'DEBUG' if DEBUG else 'INFO',
+            'propagate': True,
         },
-    }
+    },
+}
