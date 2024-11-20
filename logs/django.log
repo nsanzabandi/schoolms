@@ -587,3 +587,6 @@ INFO 2024-11-19 16:54:27,335 autoreload 18912 137094455128064 Watching for file 
 INFO 2024-11-19 16:54:49,408 autoreload 19054 138501998985216 Watching for file changes with StatReloader
 INFO 2024-11-19 21:39:06,359 autoreload 5236 124510363815936 Watching for file changes with StatReloader
 INFO 2024-11-19 21:44:34,961 autoreload 5500 128923881111552 Watching for file changes with StatReloader
+INFO 2024-11-19 21:47:20,090 autoreload 6022 133855211454464 Watching for file changes with StatReloader
+INFO 2024-11-19 21:49:51,981 autoreload 6022 133855211454464 /home/daniel/Documents/AgasaroProj/schoolms/config/settings.py changed, reloading.
+INFO 2024-11-19 21:49:52,689 autoreload 6141 134485456121856 Watching for file changes with StatReloader
