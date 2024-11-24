@@ -1,23 +1,35 @@
-{% extends 'base.html' %}
-{% load crispy_forms_tags %}
-{% load static %}
 
-{% block extra_css %}
-<link href="{% static 'css/login.css' %}" rel="stylesheet">
-{% endblock %}
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Login{% endblock %}
 
 {% block content %}
-<div class="login-container">
-    <div class="login-card">
-        <h2 class="login-title">Log in</h2>
-        <form method="post">
-            {% csrf_token %}
-            {{ form|crispy }}
-            <button type="submit" class="btn btn-login">Log in</button>
-        </form>
-        <div class="login-links">
-            <a href="#">Forgot your password?</a>
-            <a href="{% url 'accounts:register' %}">Is it your first time to login?</a>
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h3 class="card-title text-center mb-4">Login</h3>
+                <form method="post" novalidate>
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </button>
+                </form>
+                <div class="mt-3 text-center">
+                    <a href="{% url 'accounts:password_reset' %}" class="text-decoration-none">
+                        Forgot Password?
+                    </a>
+                </div>
+                <hr>
+                <div class="text-center">
+                    <p class="mb-0">Don't have an account?</p>
+                    <a href="{% url 'accounts:signup' %}" class="btn btn-outline-primary">
+                        <i class="fas fa-user-plus"></i> Sign Up
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

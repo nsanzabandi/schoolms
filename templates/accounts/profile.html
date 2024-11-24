@@ -1,68 +1,53 @@
-{% extends 'base.html' %}
-{% load static %}
+
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
 
 {% block title %}Profile{% endblock %}
 
 {% block content %}
-<div class="container mt-4">
-    <div class="row">
-        <div class="col-md-8 mx-auto">
-            <div class="card">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                    <h3 class="mb-0">Profile Information</h3>
-                    <a href="{% url 'accounts:update_profile' %}" class="btn btn-primary btn-sm">
-                        Edit Profile
-                    </a>
-                </div>
-                <div class="card-body">
-                    <div class="row mb-3">
-                        <div class="col-sm-3">
-                            <h6 class="mb-0">Full Name</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{ user.get_full_name|default:"Not set" }}
-                        </div>
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0"><i class="fas fa-user"></i> Profile Information</h4>
+            </div>
+            <div class="card-body">
+                {% if not user.email_verified %}
+                    <div class="alert alert-warning">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Your email is not verified. 
+                        <a href="{% url 'accounts:resend_verification' %}" class="alert-link">
+                            Resend verification email
+                        </a>
                     </div>
-                    <hr>
-                    <div class="row mb-3">
-                        <div class="col-sm-3">
-                            <h6 class="mb-0">Username</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{ user.username }}
-                        </div>
+                {% endif %}
+
+                <form method="post" novalidate>
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <div class="mt-4">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> Update Profile
+                        </button>
+                        <a href="{% url 'accounts:password_change' %}" class="btn btn-secondary">
+                            <i class="fas fa-key"></i> Change Password
+                        </a>
                     </div>
-                    <hr>
-                    <div class="row mb-3">
-                        <div class="col-sm-3">
-                            <h6 class="mb-0">Email</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{ user.email }}
-                            {% if user.email_verified %}
-                                <span class="badge bg-success ms-2">Verified</span>
-                            {% else %}
-                                <span class="badge bg-warning ms-2">Not Verified</span>
-                            {% endif %}
-                        </div>
+                </form>
+            </div>
+            <div class="card-footer bg-light">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <small class="text-muted">
+                            <i class="fas fa-clock"></i> Member since: 
+                            {{ user.date_joined|date:"F j, Y" }}
+                        </small>
                     </div>
-                    <hr>
-                    <div class="row mb-3">
-                        <div class="col-sm-3">
-                            <h6 class="mb-0">Date Joined</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{ user.date_joined|date:"F d, Y" }}
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row mb-3">
-                        <div class="col-sm-3">
-                            <h6 class="mb-0">Last Login</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{ user.last_login|date:"F d, Y H:i" }}
-                        </div>
+                    <div class="col-sm-6 text-right">
+                        <small class="text-muted">
+                            <i class="fas fa-sign-in-alt"></i> Last login: 
+                            {{ user.last_login|date:"F j, Y H:i" }}
+                        </small>
                     </div>
                 </div>
             </div>
