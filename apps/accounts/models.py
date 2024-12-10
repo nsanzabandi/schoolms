@@ -4,44 +4,59 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 class User(AbstractUser):
-    class UserType(models.TextChoices):
-        ADMIN = 'ADMIN', _('Admin')
-        STAFF = 'STAFF', _('Staff')
-    
-    # Add related_name to resolve the clash
-    groups = models.ManyToManyField(
-        'auth.Group',
-        verbose_name=_('groups'),
+    email = models.EmailField(_('email address'), unique=True)
+    profile_picture = models.ImageField(
+        upload_to='profile_pics/', 
+        null=True, 
         blank=True,
-        related_name='custom_user_set',  # Add this line
-        help_text=_(
-            'The groups this user belongs to. A user will get all permissions '
-            'granted to each of their groups.'
-        ),
+        verbose_name=_('Profile Picture')
     )
-    user_permissions = models.ManyToManyField(
-        'auth.Permission',
-        verbose_name=_('user permissions'),
-        blank=True,
-        related_name='custom_user_set',  # Add this line
-        help_text=_('Specific permissions for this user.'),
+    role = models.CharField(
+        max_length=20, 
+        choices=[
+            ('admin', _('Admin')),
+            ('staff', _('Staff')),
+            ('teacher', _('Teacher')),
+            ('student', _('Student'))
+        ],
+        verbose_name=_('Role')
     )
-    
-    user_type = models.CharField(
-        max_length=10,
-        choices=UserType.choices,
-        default=UserType.STAFF
+    is_active = models.BooleanField(
+        _('active status'),
+        default=False,
+        help_text=_('Designates whether this user should be treated as active. '
+                  'Unselect this instead of deleting accounts.')
     )
-    email = models.EmailField(unique=True)
-    phone_number = models.CharField(max_length=15, blank=True)
-    email_verified = models.BooleanField(default=False)
-    email_verification_token = models.CharField(max_length=100, blank=True)
-    must_change_password = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.email
+
+    @property
+    def full_name(self):
+        return f"{self.first_name} {self.last_name}".strip() or self.username
+
+    @property
+    def is_admin(self):
+        return self.role == 'admin'
+
+    @property
+    def is_teacher(self):
+        return self.role == 'teacher'
+
+    @property
+    def is_student(self):
+        return self.role == 'student'
+
+    def get_profile_picture_url(self):
+        """Safe method to get profile picture URL"""
+        try:
+            if self.profile_picture and hasattr(self.profile_picture, 'url'):
+                return self.profile_picture.url
+        except (ValueError, AttributeError):
+            pass
+        return None
 
     class Meta:
         verbose_name = _('user')
         verbose_name_plural = _('users')
-        swappable = 'AUTH_USER_MODEL'
-
-    def __str__(self):
-        return f"{self.username} ({self.get_user_type_display()})"
+        ordering = ['-date_joined']

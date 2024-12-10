@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-body text-center">
+                    <h1 class="h3 mb-3">Account Activated!</h1>
+                    <p class="lead">Your account has been successfully activated.</p>
+                    <a href="{% url 'accounts/email:password-reset' %}" class="btn btn-primary mt-3"> Update password</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

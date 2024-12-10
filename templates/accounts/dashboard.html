@@ -1,144 +1,81 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block title %}Dashboard{% endblock %}
-
-{% block content %}
-<div class="container py-4">
-    <!-- Welcome Section -->
-    <div class="row mb-4">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <i class="fas fa-tachometer-alt"></i> 
-                        Welcome, {{ user.username }}!
-                    </h4>
-                    <p class="card-text">
-                        {% if not user.email_verified %}
-                            <span class="badge badge-warning">Email not verified</span>
-                        {% endif %}
-                        <span class="badge badge-info">{{ user.get_user_type_display }}</span>
-                    </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}School Management System{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .sidebar {
+            min-height: 100vh;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .content {
+            padding: 20px;
+        }
+        .nav-link {
+            color: #333;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+        .nav-link:hover {
+            background-color: #f8f9fa;
+        }
+        .nav-link.active {
+            background-color: #0d6efd;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            {% if user.is_authenticated %}
+            <div class="col-md-3 col-lg-2 px-0 position-fixed sidebar bg-white">
+                <div class="text-center p-3">
+                    <img src="{{ user.profile_picture.url|default:'/static/images/default-avatar.png' }}" 
+                         class="rounded-circle" width="80" height="80" alt="Profile Picture">
+                    <h5 class="mt-2">{{ user.get_full_name|default:user.username }}</h5>
+                    <p class="text-muted">{{ user.role }}</p>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Statistics Cards -->
-    {% if user.user_type == 'ADMIN' %}
-    <div class="row mb-4">
-        <div class="col-md-4">
-            <div class="card bg-primary text-white">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <i class="fas fa-users"></i> Total Users
-                    </h5>
-                    <h2 class="display-4">{{ total_users }}</h2>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card bg-success text-white">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <i class="fas fa-user-tie"></i> Staff Members
-                    </h5>
-                    <h2 class="display-4">{{ total_staff }}</h2>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card bg-info text-white">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <i class="fas fa-user-shield"></i> Administrators
-                    </h5>
-                    <h2 class="display-4">{{ total_admins }}</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-    {% endif %}
-
-    <!-- Users List -->
-    <div class="card">
-        <div class="card-header bg-white">
-            <div class="d-flex justify-content-between align-items-center">
-                <h5 class="mb-0">
-                    <i class="fas fa-users"></i> 
-                    {% if user.user_type == 'ADMIN' %}
-                        Users List
-                    {% else %}
-                        Your Profile
-                    {% endif %}
-                </h5>
-                {% if user.user_type == 'ADMIN' %}
-                    <a href="{% url 'accounts:staff_management' %}" class="btn btn-primary btn-sm">
-                        <i class="fas fa-plus"></i> Add Staff
+                <nav class="nav flex-column px-3">
+                    <a class="nav-link {% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}" 
+                       href="{% url 'accounts:dashboard' %}">
+                        <i class="fas fa-home me-2"></i> Dashboard
                     </a>
+                    {% if user.is_staff %}
+                    <a class="nav-link {% if request.resolver_match.url_name == 'user_management' %}active{% endif %}" 
+                       href="{% url 'accounts:user_management' %}">
+                        <i class="fas fa-users me-2"></i> User Management
+                    </a>
+                    {% endif %}
+                    <a class="nav-link {% if request.resolver_match.url_name == 'profile' %}active{% endif %}" 
+                       href="{% url 'accounts:profile' %}">
+                        <i class="fas fa-user me-2"></i> Profile
+                    </a>
+                    <a class="nav-link" href="{% url 'accounts:logout' %}">
+                        <i class="fas fa-sign-out-alt me-2"></i> Logout
+                    </a>
+                </nav>
+            </div>
+            <div class="col-md-9 col-lg-10 offset-md-3 offset-lg-2 content">
+            {% endif %}
+                {% if messages %}
+                    {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    {% endfor %}
                 {% endif %}
+                {% block content %}{% endblock %}
+            {% if user.is_authenticated %}
             </div>
-        </div>
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th>Username</th>
-                            <th>Email</th>
-                            <th>Role</th>
-                            <th>Status</th>
-                            <th>Joined</th>
-                            {% if user.user_type == 'ADMIN' %}
-                                <th>Actions</th>
-                            {% endif %}
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for user_item in users %}
-                            <tr>
-                                <td>{{ user_item.username }}</td>
-                                <td>
-                                    {{ user_item.email }}
-                                    {% if not user_item.email_verified %}
-                                        <span class="badge badge-warning">Not verified</span>
-                                    {% endif %}
-                                </td>
-                                <td>
-                                    <span class="badge badge-info">
-                                        {{ user_item.get_user_type_display }}
-                                    </span>
-                                </td>
-                                <td>
-                                    {% if user_item.is_active %}
-                                        <span class="badge badge-success">Active</span>
-                                    {% else %}
-                                        <span class="badge badge-danger">Inactive</span>
-                                    {% endif %}
-                                </td>
-                                <td>{{ user_item.date_joined|date:"M d, Y" }}</td>
-                                {% if user.user_type == 'ADMIN' %}
-                                    <td>
-                                        <div class="btn-group btn-group-sm">
-                                            <a href="{% url 'accounts:profile' %}" class="btn btn-info">
-                                                <i class="fas fa-eye"></i>
-                                            </a>
-                                            {% if user_item != user %}  <!-- Don't show delete for self -->
-                                                <button type="button" class="btn btn-danger" 
-                                                        onclick="alert('Delete functionality to be implemented')">
-                                                    <i class="fas fa-trash"></i>
-                                                </button>
-                                            {% endif %}
-                                        </div>
-                                    </td>
-                                {% endif %}
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
+            {% endif %}
         </div>
     </div>
-</div>
-{% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

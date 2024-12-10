@@ -1,57 +1,51 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm, PasswordResetForm
-from django.contrib.auth import get_user_model
-from django.utils.crypto import get_random_string
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.utils.translation import gettext_lazy as _
+from .models import User
 
-User = get_user_model()
+class CustomUserCreationForm(UserCreationForm):
+    email = forms.EmailField(
+        max_length=254,
+        required=True,
+        help_text='Required. Enter a valid email address.'
+    )
+    first_name = forms.CharField(
+        max_length=30,
+        required=True,
+        help_text='Required. Enter your first name.'
+    )
+    last_name = forms.CharField(
+        max_length=30,
+        required=True,
+        help_text='Required. Enter your last name.'
+    )
+    
+    class Meta(UserCreationForm.Meta):
+        model = User
+        fields = ('username', 'email', 'first_name', 'last_name', 'role', 'profile_picture')
 
-class UserRegistrationForm(UserCreationForm):
-    email = forms.EmailField(required=True)
-    phone_number = forms.CharField(max_length=15, required=False)
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # Make all fields required except profile_picture
+        for field_name, field in self.fields.items():
+            if field_name != 'profile_picture':
+                field.required = True
+
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+        if User.objects.filter(email=email).exists():
+            raise forms.ValidationError('A user with that email already exists.')
+        return email
+
+class CustomUserChangeForm(UserChangeForm):
+    password = None  # Remove password field from form
     
     class Meta:
         model = User
-        fields = ('username', 'email', 'phone_number', 'password1', 'password2')
-
-    def save(self, commit=True):
-        user = super().save(commit=False)
-        user.email = self.cleaned_data['email']
-        user.phone_number = self.cleaned_data['phone_number']
-        user.email_verification_token = get_random_string(100)
-        user.must_change_password = True
-        if commit:
-            user.save()
-        return user
-
-class UserUpdateForm(forms.ModelForm):
-    class Meta:
-        model = User
-        fields = ('username', 'email', 'phone_number')
-
+        fields = ('username', 'email', 'first_name', 'last_name', 'role', 'profile_picture')
+        
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['email'].disabled = True  # Email cannot be changed directly
-
-class CustomPasswordChangeForm(PasswordChangeForm):
-    def save(self, commit=True):
-        user = super().save(commit=False)
-        user.must_change_password = False  # Reset the flag when password is changed
-        if commit:
-            user.save()
-        return user
-
-class CustomPasswordResetForm(PasswordResetForm):
-    def get_users(self, email):
-        """Given an email, return matching user(s) who should receive a reset."""
-        return User.objects.filter(email=email, is_active=True)
-
-class StaffCreationForm(UserRegistrationForm):
-    class Meta(UserRegistrationForm.Meta):
-        model = User
-        fields = UserRegistrationForm.Meta.fields + ('user_type',)
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['user_type'].initial = User.UserType.STAFF
-        if not kwargs.get('initial', {}).get('is_admin_creating'):
-            self.fields['user_type'].disabled = True
+        self.fields['email'].required = True
+        self.fields['first_name'].required = True
+        self.fields['last_name'].required = True

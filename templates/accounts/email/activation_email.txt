@@ -1,0 +1,15 @@
+
+Welcome to School Management System!
+
+Hi {{ user.get_full_name|default:user.username }},
+
+Thank you for registering. To activate your account, please visit the following link:
+
+{{ protocol }}://{{ domain }}{% url 'accounts:activate' uidb64=uid token=token %}
+
+This link will expire in 24 hours for security reasons.
+
+If you didn't register for an account, you can safely ignore this email.
+
+Best regards,
+School Management Team
